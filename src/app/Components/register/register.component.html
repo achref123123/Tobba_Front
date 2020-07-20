@@ -1,0 +1,110 @@
+<div class="container-fluid no-padding h-100">
+  <div class="row flex-row h-100 bg-white">
+    <!-- Begin Left Content -->
+    <div class="col-xl-8 col-lg-6 col-md-5 no-padding">
+      <div class="elisyam-bg background-05">
+        <div class="elisyam-overlay overlay-04"></div>
+        <div class="authentication-col-content mx-auto">
+          <h1 class="gradient-text-01">
+            Be Elisyam!
+          </h1>
+          <span class="description">
+                                Etiam consequat urna at magna bibendum, in tempor arcu fermentum vitae mi massa egestas.
+                            </span>
+        </div>
+      </div>
+    </div>
+    <!-- End Left Content -->
+    <!-- Begin Right Content -->
+    <div class="col-xl-4 col-lg-6 col-md-7 my-auto no-padding">
+      <!-- Begin Form -->
+      <div class="authentication-form mx-auto">
+        <div class="logo-centered">
+          <a href="db-default.html">
+            <img src="assets/img/logo.png" alt="logo">
+          </a>
+        </div>
+        <h3>Create An Account</h3>
+        <form [formGroup]="registerForm" >
+          <div class="group material-input">
+            <input type="text" formControlName="username" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Username</label>
+          </div>
+          <div class="group material-input">
+            <input type="text" formControlName="first_name"  >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Prénom</label>
+          </div>
+          <div class="group material-input">
+            <input type="text"  formControlName="last_name" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Nom</label>
+          </div>
+          <div class="group material-input">
+            <input type="text" formControlName="email" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Email</label>
+          </div>
+          <div class="group material-input">
+<!--            <input type="text" required [(ngModel)]="register.birth_date" bsDatepicker [bsConfig]="datePickerConfig"  [ngModelOptions]="{standalone: true}">-->
+            <input type="date"  formControlName="birth_date" placeholder="date de naissance">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+          </div>
+          <div class="group material-input">
+            <input type="text" formControlName="phonenumber">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Numéro téléphone</label>
+          </div>
+          <div class="group material-input">
+            <input type="password" formControlName="password" >
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Mot de passe</label>
+          </div>
+          <div class="group material-input">
+            <input type="password"  formControlName="confirm_password">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Confirme mot de passe</label>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col text-left">
+            <div class="styled-checkbox">
+              <input type="checkbox" name="checkbox" id="agree">
+              <label for="agree">I Accept <a href="#">Terms and Conditions</a></label>
+            </div>
+          </div>
+        </div>
+        <div class="sign-btn text-center">
+          <button (click)="registerUser()" class="btn btn-lg btn-gradient-01">
+            Create an account
+          </button>
+        </div>
+        <div class="register">
+          Already have an account?
+          <br>
+          <a (click)="log()">Sign In</a>
+        </div>
+      </div>
+      <!-- End Form -->
+    </div>
+    <!-- End Right Content -->
+  </div>
+  <!-- End Row -->
+</div>
+<!-- End Container -->
+<!-- Begin Vendor Js -->
+<script src="assets/vendors/js/base/jquery.min.js"></script>
+<script src="assets/vendors/js/base/core.min.js"></script>
+<!-- End Vendor Js -->
+<!-- Begin Page Vendor Js -->
+<script src="assets/vendors/js/app/app.min.js"></script>
+<!-- End Page Vendor Js -->
